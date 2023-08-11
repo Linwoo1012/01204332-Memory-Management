@@ -5,25 +5,25 @@
 // malloc
 int* arr[5];
 
-void heap(){
-    for(int i=0; i<3; i++){
-        arr[i] = (int*)malloc(sizeof(int));
+void heap(int stop){
+    for(int i=1; i<stop+1; i++){
+        arr[i-1] = (int*)malloc(sizeof(int));
         printf("heap\ti = %d\tis at %p\n", i, arr[i]);
     }
 
-    for(int i=0; i<3; i++){
-        free(arr[i]);
+    for(int i=1; i<stop+1; i++){
+        free(arr[i-1]);
     }
 }
 
 // stack
-void stack(int n){
-    printf("stack\ti = %d\tis at %p\n",n,n);
-    if(n >= 2){
+void stack(int start, int stop){
+    printf("stack\ti = %d\tis at %p\n", start, &start);
+    if(start >= stop){
         return;
     }
     else{
-        stack(n+1);
+        stack(start+1, stop);
     }
 }
 
@@ -33,11 +33,9 @@ int G2;
 int G3 = 10;
 
 //overflows
-long long* arr2[10000000];
-
 void overflow(long long N){
-    arr2[N] = (long long*)malloc(sizeof(long long)*100);
-    printf("N = %lld\t%p\t%p\n", N, &N, arr2[N]);
+    long long arr[1024];
+    printf("stack\ti = %lld\tis at %p\n",N,arr);
     overflow(N+1);
 }
 
@@ -50,10 +48,11 @@ int main(){
         overflow(0);
     }
     else{
-        printf("G1 is at %p\n", &G1);
-        printf("G2 is at %p\n", &G2);
-        printf("G3 is at %p\n", &G3);
-        heap();
-        stack(0);
+        printf("Global variables 1 is at %p\n", &G1);
+        printf("Global variables 2 is at %p\n", &G2);
+        printf("Global variables 3 is at %p\n\n", &G3);
+        heap(5);
+        printf("\n");
+        stack(1,5);
     }
 }

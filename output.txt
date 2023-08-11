@@ -1,0 +1,15 @@
+Global variables 1 is at 00407074
+Global variables 2 is at 00407070
+Global variables 3 is at 00404004
+
+heap    i = 1   is at 00000000
+heap    i = 2   is at 00000000
+heap    i = 3   is at 00000000
+heap    i = 4   is at 00000000
+heap    i = 5   is at 00000000
+
+stack   i = 1   is at 0061FF00
+stack   i = 2   is at 0061FEE0
+stack   i = 3   is at 0061FEC0
+stack   i = 4   is at 0061FEA0
+stack   i = 5   is at 0061FE80
