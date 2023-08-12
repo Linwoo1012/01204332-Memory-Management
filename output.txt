@@ -1,12 +1,16 @@
-Global variables 1 is at 00407074
-Global variables 2 is at 00407070
-Global variables 3 is at 00404004
+Uninitialized data
+uG1 is at 00407070
+uG2 is at 00407074
 
-heap    i = 1   is at 00741AB8
-heap    i = 2   is at 00741AC8
-heap    i = 3   is at 00741AD8
-heap    i = 4   is at 00741AE8
-heap    i = 5   is at 00741AF8
+Initialized data
+G1 is at 00404004
+G2 is at 00404008
+
+heap    i = 1   is at 007C1AB8
+heap    i = 2   is at 007C1AC8
+heap    i = 3   is at 007C1AD8
+heap    i = 4   is at 007C1AE8
+heap    i = 5   is at 007C1AF8
 
 stack   i = 1   is at 0061FF00
 stack   i = 2   is at 0061FEE0

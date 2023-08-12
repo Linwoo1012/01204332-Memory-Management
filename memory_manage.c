@@ -28,9 +28,10 @@ void stack(int start, int stop){
 }
 
 // global var
-int G1;
-int G2;
-int G3 = 10;
+int uG1;
+int uG2;
+int G1 = 10;
+int G2 = 10;
 
 //overflows
 void overflow(long long N){
@@ -48,9 +49,12 @@ int main(){
         overflow(0);
     }
     else{
-        printf("Global variables 1 is at %p\n", &G1);
-        printf("Global variables 2 is at %p\n", &G2);
-        printf("Global variables 3 is at %p\n\n", &G3);
+        printf("\nUninitialized data\n");
+        printf("uG1 is at %p\n", &uG1);
+        printf("uG2 is at %p\n", &uG2);
+        printf("\nInitialized data\n");
+        printf("G1 is at %p\n", &G1);
+        printf("G2 is at %p\n\n", &G2);
         heap(5);
         printf("\n");
         stack(1,5);
