@@ -8,7 +8,7 @@ int* arr[5];
 void heap(int stop){
     for(int i=1; i<stop+1; i++){
         arr[i-1] = (int*)malloc(sizeof(int));
-        printf("heap\ti = %d\tis at %p\n", i, arr[i]);
+        printf("heap\ti = %d\tis at %p\n", i, arr[i-1]);
     }
 
     for(int i=1; i<stop+1; i++){
