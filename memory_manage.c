@@ -36,7 +36,9 @@ int G2 = 10;
 //overflows
 void overflow(long long N){
     long long arr[1024];
+    long long *i = (long long*)malloc(sizeof(long long)*10);
     printf("stack\ti = %lld\tis at %p\n",N,arr);
+    printf("heap\ti = %lld\tis at %p\n",N,i);
     overflow(N+1);
 }
 
